@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S.RG&H – Schweißreparatur · Garten · Haushalt</title>
+  <meta name="description" content="S.RG&H – Zuverlässige Schweißreparaturen sowie Arbeiten rund um Garten & Haushalt. Schnelle Termine, faire Preise, regionaler Service." />
+  <link rel="icon" href="favicon.png" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --panel: #f9f9f9;
+      --muted: #555555;
+      --text: #111111;
+      --brand: #2e7d32;
+      --brand-2: #66bb6a;
+      --shadow: 0 4px 20px rgba(0,0,0,.1);
+      --radius: 14px;
+      --maxw: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--text);
+      background: linear-gradient(180deg, #e8f5e9 0%, #ffffff 80%);
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    img { max-width: 100%; display: block; border-radius: var(--radius); }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    header.site {
+      position: sticky; top: 0; z-index: 10;
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    .nav {
+      display: flex; justify-content: space-between; align-items: center; padding: 14px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .brand-logo { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: white; color: var(--brand); font-weight: bold; }
+
+    .btn {
+      border: 1px solid #ccc;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: white;
+      color: var(--text);
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #f0f0f0; }
+    .btn--primary {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      border: none;
+      color: white;
+      font-weight: 700;
+    }
+
+    .hero { padding: 50px 0 24px; }
+    .hero-wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; }
+    @media (max-width: 900px) { .hero-wrap { grid-template-columns: 1fr; } }
+
+    .chip { display: inline-block; padding: 6px 10px; border: 1px solid #ccc; border-radius: 999px; color: var(--muted); font-size: 13px; }
+    .title { font-size: clamp(28px, 5vw, 44px); margin: 14px 0; color: var(--brand); }
+    .subtitle { color: var(--muted); margin: 12px 0 24px; }
+
+    .hero-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .tab-labels { display: flex; gap: 8px; margin-top: 26px; }
+    .tab-labels label {
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      color: var(--muted);
+    }
+    .tab-input { position: absolute; left: -9999px; }
+    .tab-panel { display: none; margin-top: 16px; }
+    #tab-about:checked ~ .tab-labels label[for="tab-about"],
+    #tab-services:checked ~ .tab-labels label[for="tab-services"],
+    #tab-refs:checked ~ .tab-labels label[for="tab-refs"] {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: white;
+      border-color: transparent;
+    }
+    #tab-about:checked ~ .panels #panel-about,
+    #tab-services:checked ~ .panels #panel-services,
+    #tab-refs:checked ~ .panels #panel-refs { display: block; }
+
+    .section {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .grid { display: grid; gap: 16px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width:900px){.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+
+    .card { background: #fafafa; border: 1px solid #ddd; border-radius: 12px; padding: 18px; }
+    .card h3 { margin: 6px 0 10px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .placeholder-img {
+      background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      display: grid;
+      place-items: center;
+      color: #2e7d32;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    footer.site { margin: 40px 0 50px; color: var(--muted); border-top: 1px solid #ddd; padding-top: 14px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  </style>
+</head>
+<body>
+  <header class="site">
+    <nav class="container nav">
+      <a class="brand" href="#top">
+        <span class="brand-logo">⚒️</span>
+        <span style="color:white;">S.RG&H</span>
+      </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div class="hero-wrap">
+        <div>
+          <span class="chip">Regional · Zuverlässig · Fair</span>
+          <h1 class="title">S.RG&H – Schweißreparatur · Garten · Haushalt</h1>
+          <p class="subtitle">Ich bringe Metall wieder in Form, halte Ihren Garten in Schuss und unterstütze Haushalt & Objekt mit handwerklichem Rundum-Service.</p>
+        </div>
+        <aside class="hero-card">
+          <h2>Schnellkontakt</h2>
+          <p>Unverbindlich anfragen – ich melde mich zeitnah.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn--primary" href="tel:+4917680033698">Anrufen</a>
+            <a class="btn" href="mailto:S.RGH@gmx.de">E-Mail senden</a>
+          </div>
+          <p style="margin-top:12px;font-size:13px;color:var(--muted)">Mo–Fr 08–18 Uhr · Region: Dortmund</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="tabs">
+      <input class="tab-input" type="radio" name="tabs" id="tab-about" checked>
+      <input class="tab-input" type="radio" name="tabs" id="tab-services">
+      <input class="tab-input" type="radio" name="tabs" id="tab-refs">
+
+      <div class="tab-labels">
+        <label for="tab-about">Über mich</label>
+        <label for="tab-services">Leistungen</label>
+        <label for="tab-refs">Referenzen</label>
+      </div>
+
+      <div class="panels">
+        <div id="panel-about" class="tab-panel section">
+          <h2>Über mich</h2>
+          <div class="grid cols-2">
+            <div>
+              <p>Hallo! Mein Name ist Andrey Frizen<br> Ich bin seit über 18 Jahren MAG und MIG geprüfter Schweißer. 12 Jahre habe ich bei der Firma Jöst gearbeitet und europaweit Montagen für Industriegeräte durchgeführt. Nun biete ich als selbstständiger Handwerker verschiedene Leistungen an:<br> Schweiß und Reparaturarbeiten, Garten und Landschaftsarbeiten sowie häusliche Handwerkstätigkeiten. </p>
+            </div>
+            <img src="assets/Portrait.JPG" alt="Foto von Andrey Frizen">
+            </div>
+        </div>
+
+        <div id="panel-services" class="tab-panel section">
+          <h2 id="services">Leistungen</h2>
+          <div class="grid cols-3">
+            <article class="card"><h3>Schweißreparaturen</h3><p>Risse schließen, Brüche verstärken, Bauteile neu aufbauen (Stahl/Alu).</p></article>
+            <article class="card"><h3>Montage & Haushalt</h3><p>Auf- und Einbau, Instandsetzung, kleine Renovierungen – sauber & zuverlässig.</p></article>
+            <article class="card"><h3>Garten & Außenbereich</h3><p>Pflege, kleine Bauarbeiten und Metall im Außenbereich – robust & wetterfest.</p></article>
+          </div>
+        </div>
+
+        <div id="panel-refs" class="tab-panel section">
+          <h2 id="refs">Referenzen</h2>
+          <p>Einige meiner Arbeiten im Überblick:</p>
+          <ul>
+            <li>Geländer-Reparatur (Privat)</li>
+            <li>Zaunfeld neu verschweißt</li>
+            <li>Markisenmontage (Gewerbe)</li>
+            <li>Geräte-Instandsetzung</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site container">
+      <div class="footer-inner">
+        <small>© <span id="year"></span> S.RG&H – Alle Rechte vorbehalten.</small>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn" href="#">Impressum</a>
+          <a class="btn" href="#">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
